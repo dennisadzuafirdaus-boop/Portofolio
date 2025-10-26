@@ -1,0 +1,381 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family : 'Poppins', sans-serif;
+}
+
+    html {
+      scroll-behavior: smooth; /* ✅ bikin efek slide */
+    }
+
+    body {
+      background: url(gambar/Black.jpg);
+      color: #fff;
+    }
+
+    /* ====== ANIMASI NAVBAR ====== */
+.header {
+  animation: slideDown 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ====== ANIMASI TEKS DI HOME ====== */
+.Home-content h1,
+.Home-content h3,
+.Home-content p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.Home-content h1 {
+  animation-delay: 0.5s;
+}
+.Home-content h3 {
+  animation-delay: 1s;
+}
+.Home-content p {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== ANIMASI FOTO PROFIL ====== */
+.home-img img {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomGlow 1.2s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes zoomGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 0 0px aqua;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 25px aqua, 0 0 50px rgba(0,255,255,0.6);
+  }
+}
+
+    /* Navbar */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10px;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    .Logo {
+      font-size: 25px;
+      color: aqua;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar a {
+      font-size: 18px;
+      color: aqua;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: 30px;
+      transition: .3s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+    color: yellow;
+}
+
+    /* Home section */
+    #Home {
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 120px 10% 60px;
+      gap: 50px;
+    }
+
+    .Home-content {
+      flex: 1;
+      text-align: left; /* teks kiri */
+    }
+
+    .Home-content h1 {
+      font-size: 64px;
+      font-weight: 700;
+      color: aqua;
+    }
+
+    .Home-content h3 {
+      font-size: 40px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: lightblue;
+    }
+
+    .Home-content p {
+      margin-top: 20px;
+      font-size: 18px;
+      color: white;
+      max-width: 500px;
+    }
+
+    .home-img {
+      flex: 1;
+      display: flex;
+      justify-content: center; /* tengah kanan */
+    }
+
+    .home-img img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      border: 3px solid aqua;
+      box-shadow: 0 0 25px aqua;
+      object-fit: cover;
+    }
+
+    /* Section lain */
+    section {
+      padding: 100px 10% 80px;
+      background: url(gambar/Black.jpg);
+      min-height: 100vh;
+    }
+
+    .Profil h1 {
+      text-align: center;     /* teks di tengah */
+  font-size: 58px;
+  font-weight: 700;
+  color: aqua;
+  margin: 0 auto 20px;    /* auto kiri-kanan */
+  width: fit-content;     /* biar teksnya rapat */
+    }
+
+    .Profil-content {
+       font-size: 24px;
+      font-weight: 600;
+      margin-top: 10px;
+      flex: 1;
+       text-align: left; /* teks kiri */
+    }
+
+    .skills-container {
+  display: flex;
+  justify-content: space-between; /* Hard skill di kiri, Soft skill di kanan */
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.skill-group {
+  flex: 1; /* Biar Hard & Soft skill sama-sama lebar */
+}
+
+.skill-group h2 {
+  color: aqua;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, teal, aqua);
+}
+
+
+    #Massage_Us {
+      background: url(gambar/Black.jpg);
+    }
+    #contact {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: aqua; /* hijau */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: teal;
+  }
+
+  .portofolio {
+     text-align: center;     /* teks di tengah */
+  font-size: 58px;
+  font-weight: 700;
+  color: aqua;
+  margin: 0 auto 20px;    /* auto kiri-kanan */
+  width: fit-content;  
+  }
+
+    /* Project Section */
+  .project-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.project-card {
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ==== Bagian gambar ==== */
+.project-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* biar gambar gak gepeng atau kepotong */
+  object-position: center;
+  display: block;
+}
+
+/* ==== Bagian konten ==== */
+.project-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.btn-detail {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #0b3d91;
+  color: #0b3d91;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #0b3d91;
+  color: #fff;
+}
+
+
+.social-links {
+  display: flex;
+ justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 28px;
+  color: aqua;
+  border: 2px solid aqua;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: yellow;
+  border-color: yellow;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px yellow;
+}
+
+.blog-tittle {
+   text-align: center;     /* teks di tengah */
+  font-size: 58px;
+  font-weight: 700;
+  color: aqua;
+  margin: 0 auto 20px;    /* auto kiri-kanan */
+  width: fit-content;  
+  }
+
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
